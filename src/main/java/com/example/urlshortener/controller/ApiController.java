@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 import jakarta.validation.Valid;
 import java.util.List;
 
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "aalinkmaster.netlify.app")
 @RestController
 @RequestMapping("/api")
 public class ApiController {
