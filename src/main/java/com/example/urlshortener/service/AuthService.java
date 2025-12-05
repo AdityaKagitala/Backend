@@ -1,5 +1,6 @@
 package com.example.urlshortener.service;
 
+import com.example.urlshortener.model.PlanType;
 import com.example.urlshortener.model.User;
 import com.example.urlshortener.repository.UserRepository;
 import com.example.urlshortener.security.JwtUtil;
@@ -25,7 +26,7 @@ public class AuthService {
                 .username(username)
                 .email(Email)
                 .password(passwordEncoder.encode(password))
-
+                .plan(PlanType.FREE)
                 .build();
         userRepository.save(user);
         return "User registered successfully!";
